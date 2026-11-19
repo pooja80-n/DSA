@@ -65,3 +65,95 @@ class Solution {
         return res;
     }
 }
+
+//  import java.util.*;
+
+// public class Main {
+//     public static void main(String[] args) {
+
+//         int[] nums = {-7, -3, -1, 2, 5};
+
+//         ArrayList<Integer> A = new ArrayList<>();
+//         ArrayList<Integer> B = new ArrayList<>();
+
+//         // Step 1: Separate negative and positive numbers
+//         for (int i = 0; i < nums.length; i++) {
+
+//             if (nums[i] < 0) {
+//                 A.add(nums[i]);
+//             } else {
+//                 B.add(nums[i]);
+//             }
+//         }
+
+//         // Step 2: If A is empty (all positive)
+//         if (A.size() == 0) {
+
+//             for (int i = 0; i < B.size(); i++) {
+//                 B.set(i, B.get(i) * B.get(i));
+//             }
+
+//             System.out.println(B);
+//         }
+
+//         // Step 3: If B is empty (all negative)
+//         else if (B.size() == 0) {
+
+//             for (int i = 0; i < A.size(); i++) {
+//                 A.set(i, A.get(i) * A.get(i));
+//             }
+
+//             Collections.reverse(A);
+
+//             System.out.println(A);
+//         }
+
+//         // Step 4: If both negative and positive numbers exist
+//         else {
+
+//             // Square A
+//             for (int i = 0; i < A.size(); i++) {
+//                 A.set(i, A.get(i) * A.get(i));
+//             }
+
+//             // Square B
+//             for (int i = 0; i < B.size(); i++) {
+//                 B.set(i, B.get(i) * B.get(i));
+//             }
+
+//             // Reverse A
+//             Collections.reverse(A);
+
+//             // Merge A and B
+//             ArrayList<Integer> result = new ArrayList<>();
+
+//             int i = 0;
+//             int j = 0;
+
+//             while (i < A.size() && j < B.size()) {
+
+//                 if (A.get(i) < B.get(j)) {
+//                     result.add(A.get(i));
+//                     i++;
+//                 } else {
+//                     result.add(B.get(j));
+//                     j++;
+//                 }
+//             }
+
+//             // Add remaining elements of A
+//             while (i < A.size()) {
+//                 result.add(A.get(i));
+//                 i++;
+//             }
+
+//             // Add remaining elements of B
+//             while (j < B.size()) {
+//                 result.add(B.get(j));
+//                 j++;
+//             }
+
+//             System.out.println(result);
+//         }
+//     }
+// }
